@@ -15,6 +15,7 @@ export type GalleryImage = {
   title: string;
   description: string | null;
   storage_path: string;
+  image_url: string | null;
   display_order: number;
   is_featured: boolean;
   created_at: string;
