@@ -21,7 +21,7 @@ export async function sendQuoteNotification(
 
   const resend = new Resend(apiKey);
   const { error } = await resend.emails.send({
-    from: process.env.RESEND_FROM_EMAIL ?? "Rios Landscaping <onboarding@resend.dev>",
+    from: process.env.RESEND_FROM_EMAIL ?? "onboarding@resend.dev",
     to: SITE.email,
     replyTo: data.email,
     subject: `New Quote Request — ${data.fullName}`,
