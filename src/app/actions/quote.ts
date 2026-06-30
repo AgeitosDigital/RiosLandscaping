@@ -1,6 +1,7 @@
 "use server";
 
 import { createClient } from "@/lib/supabase/server";
+import { sendQuoteNotification } from "@/lib/email";
 import { revalidatePath } from "next/cache";
 
 export type QuoteFormState = {
@@ -57,6 +58,15 @@ export async function submitQuoteRequest(
         message: "Something went wrong. Please try again or call us directly.",
       };
     }
+
+    await sendQuoteNotification({
+      fullName,
+      email,
+      phone,
+      address,
+      serviceType,
+      message,
+    });
 
     revalidatePath("/");
     return {
