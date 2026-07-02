@@ -32,10 +32,6 @@ export const metadata: Metadata = {
     type: "website",
     images: [{ url: SITE.logo }],
   },
-  icons: {
-    icon: SITE.logo,
-    apple: SITE.logo,
-  },
 };
 
 export default function RootLayout({
