@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { Logo } from "@/components/Logo";
 import { SITE } from "@/lib/constants";
 
 export function Footer() {
@@ -7,9 +9,11 @@ export function Footer() {
     <footer className="border-t border-stone-200 bg-white py-12">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
-          <div className="text-center sm:text-left">
-            <p className="font-display text-lg font-semibold text-forest-950">{SITE.name}</p>
-            <p className="mt-1 text-sm text-stone-500">{SITE.location}</p>
+          <div className="flex flex-col items-center gap-2 text-center sm:items-start sm:text-left">
+            <Link href="/">
+              <Logo height={64} />
+            </Link>
+            <p className="text-sm text-stone-500">{SITE.location}</p>
           </div>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-stone-600">
             <a href={`tel:${SITE.phone}`} className="hover:text-forest-700">

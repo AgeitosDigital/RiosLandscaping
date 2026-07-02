@@ -1,6 +1,7 @@
 export const SITE = {
   name: "Rios Landscaping",
   domain: "rioslandscaping.co",
+  logo: "/images/rios-landscaping-logo.png",
   phone: "281-685-7848",
   email: "Srevirgr4@gmail.com",
   location: "Houston, TX & Greater Metro Area",

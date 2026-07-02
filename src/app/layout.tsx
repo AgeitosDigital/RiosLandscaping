@@ -30,6 +30,11 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     locale: "en_US",
     type: "website",
+    images: [{ url: SITE.logo }],
+  },
+  icons: {
+    icon: SITE.logo,
+    apple: SITE.logo,
   },
 };
 
